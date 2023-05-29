@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">VieStar</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_home">Home</string>
+    <string name="title_study">Study</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_profile">Profile</string>
+    <string name="search">Search</string>
+    <string name="search_hint">Masukkan kata</string>
+    <string name="notif">Notifikasi</string>
+    <string name="kosa_kata_hari_ini">Kosakata Hari Ini</string>
+    <string name="klik_arti_tepat">Klik arti yang tepat</string>
+    <string name="makan">Makan</string>
+    <string name="minum">Minum</string>
+    <string name="eat">Eat</string>
+    <string name="tab_text_1">Local</string>
+    <string name="tab_text_2">Streaming</string>
+    <string name="judul_film">Fast and Furious 10</string>
+    <string name="deskripsi_film">Selama banyak misi dan melawan rintangan yang mustahil, Dom Toretto dan keluarganya telah mengakali dan mengalahkan setiap musuh di jalan mereka</string>
+
+    <string-array name="data_name">
+        <item>Fast and Furious 9</item>
+        <item>Evil Dead Rise</item>
+        <item>Home For Rent</item>
+    </string-array>
+    <string-array name="data_description">
+        <item>Selama banyak misi dan melawan rintangan yang mustahil, Dom Toretto dan keluarganya telah mengakali dan mengalahkan setiap musuh di jalan mereka. Sekarang, mereka menghadapi lawan paling mematikan yang pernah mereka hadapi. </item>
+        <item>Evil Dead Rise bercerita tentang sepasang kakak adik yang berusaha menyelamatkan diri dan keluarganya dari makhluk jahat yang menghantui rumahnya. Makhluk jahat ini muncul saat keduanya menemukan ‘kitab orang mati’. Kitab inilah yang memanggil roh-roh tersebut untuk datang.</item>
+        <item>Ini adalah film horor Thailand yang telah tayang pada 6 April 2023 lalu di negara asalnya. Film ini diketahui akan masuk Indonesia pada Mei 2023 mendatang. Home For Rent bercerita tentang sepasang suami istri yang memutuskan untuk menyewakan rumahnya dan pindah ke apartemen. Tetapi, setelah menyewakan rumah, perilaku sang suami mulai berubah dan sering menghilang di malam hari.</item>
+    </string-array>
+    <integer-array name="data_photo">
+        <item>@drawable/fast10</item>
+        <item>@drawable/evildeadrise</item>
+        <item>@drawable/homeforrent</item>
+    </integer-array>
+</resources>

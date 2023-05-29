@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="txtInterbold12_1">
+        <item name="android:textSize">12dp</item>
+        <item name="android:textColor">@color/orange</item>
+        <item name="android:textFontWeight">700</item>
+    </style>
+</resources>
