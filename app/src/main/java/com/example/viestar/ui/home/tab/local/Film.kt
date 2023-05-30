@@ -1,5 +1,6 @@
 package com.example.viestar.ui.home.tab.local
 
+import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 
 @Parcelize

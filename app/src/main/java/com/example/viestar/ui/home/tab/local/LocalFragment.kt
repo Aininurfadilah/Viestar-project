@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.viestar.R
 
 class LocalFragment : Fragment() {
@@ -12,28 +14,30 @@ class LocalFragment : Fragment() {
     private lateinit var rvFilm: RecyclerView
     private val list = ArrayList<Film>()
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+//    override fun onCreate(savedInstanceState: Bundle?) {
+//        super.onCreate(savedInstanceState)
+//        arguments?.let {
+//            param1 = it.getString(ARG_PARAM1)
+//            param2 = it.getString(ARG_PARAM2)
+//        }
+//    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
-        rvHeroes = findViewById(R.id.rv_film)
-        rvHeroes.setHasFixedSize(true)
+        val view = inflater.inflate(R.layout.fragment_local, container, false)
+        rvFilm = view.findViewById(R.id.rv_film)
+        rvFilm.setHasFixedSize(true)
 
         list.addAll(getListFilm())
         showRecyclerList()
 
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_local, container, false)
+//        return inflater.inflate(R.layout.fragment_local, container, false)
+        return view
     }
+
 
     private fun getListFilm(): ArrayList<Film> {
         val dataName = resources.getStringArray(R.array.data_name)
@@ -48,7 +52,7 @@ class LocalFragment : Fragment() {
     }
 
     private fun showRecyclerList() {
-        rvFilm.layoutManager = LinearLayoutManager(this)
+        rvFilm.layoutManager = LinearLayoutManager(requireContext())
         val listFilmAdapter = ListFilmAdapter(list)
         rvFilm.adapter = listFilmAdapter
     }

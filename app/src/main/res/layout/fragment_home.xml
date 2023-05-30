@@ -182,33 +182,38 @@
         </LinearLayout>
     </LinearLayout>
 
-    <FrameLayout
+<!--    <androidx.coordinatorlayout.widget.CoordinatorLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="500dp"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/banner">-->
+<!--        -->
+
+<!--    </androidx.coordinatorlayout.widget.CoordinatorLayout>-->
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="500dp"
         android:layout_marginTop="10dp"
-        app:layout_constraintTop_toBottomOf="@+id/banner">
+        style="@style/bgTabLayout"
+        app:layout_constraintTop_toBottomOf="@+id/banner"
+        android:orientation="vertical">
 
-        <LinearLayout
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content"
             style="@style/bgTabLayout"
-            android:orientation="vertical">
+            app:tabIndicatorColor="@color/white"
+            app:tabTextColor="@android:color/white" />
 
-            <com.google.android.material.tabs.TabLayout
-                android:id="@+id/tabs"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/bgTabLayout"
-                app:tabIndicatorColor="@color/white"
-                app:tabTextColor="@android:color/white" />
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager"
+            android:paddingTop="5dp"
+            android:paddingBottom="135dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
-            <androidx.viewpager2.widget.ViewPager2
-                android:id="@+id/view_pager"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-        </LinearLayout>
-
-    </FrameLayout>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

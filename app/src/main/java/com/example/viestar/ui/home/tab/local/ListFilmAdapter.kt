@@ -1,5 +1,13 @@
 package com.example.viestar.ui.home.tab.local
 
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
+import androidx.recyclerview.widget.RecyclerView
+import com.example.viestar.R
+
 class ListFilmAdapter(private val listFilm: ArrayList<Film>) : RecyclerView.Adapter<ListFilmAdapter.ListViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
@@ -14,7 +22,7 @@ class ListFilmAdapter(private val listFilm: ArrayList<Film>) : RecyclerView.Adap
         holder.tvDescription.text = description
     }
 
-    override fun getItemCount(): Int = listHero.size
+    override fun getItemCount(): Int = listFilm.size
 
     class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val imgPhoto: ImageView = itemView.findViewById(R.id.img_item_photo)
