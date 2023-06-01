@@ -17,6 +17,8 @@
     <string name="tab_text_2">Streaming</string>
     <string name="judul_film">Fast and Furious 10</string>
     <string name="deskripsi_film">Selama banyak misi dan melawan rintangan yang mustahil, Dom Toretto dan keluarganya telah mengakali dan mengalahkan setiap musuh di jalan mereka</string>
+    <string name="save_word">Save Words</string>
+    <string name="word">Word</string>
 
     <string-array name="data_name">
         <item>Fast and Furious 9</item>
@@ -33,4 +35,14 @@
         <item>@drawable/evildeadrise</item>
         <item>@drawable/homeforrent</item>
     </integer-array>
+    <string-array name="data_word">
+        <item>Word</item>
+        <item>Word</item>
+        <item>Word</item>
+        <item>Word</item>
+        <item>Word</item>
+        <item>Word</item>
+        <item>Word</item>
+        <item>Word</item>
+    </string-array>
 </resources>

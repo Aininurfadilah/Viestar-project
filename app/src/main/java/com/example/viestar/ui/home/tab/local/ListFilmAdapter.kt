@@ -19,7 +19,7 @@ class ListFilmAdapter(private val listFilm: ArrayList<Film>) : RecyclerView.Adap
         val (name, description, photo) = listFilm[position]
         holder.imgPhoto.setImageResource(photo)
         holder.tvName.text = name
-        holder.tvDescription.text = description
+//        holder.tvDescription.text = description
     }
 
     override fun getItemCount(): Int = listFilm.size
@@ -27,6 +27,6 @@ class ListFilmAdapter(private val listFilm: ArrayList<Film>) : RecyclerView.Adap
     class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val imgPhoto: ImageView = itemView.findViewById(R.id.img_item_photo)
         val tvName: TextView = itemView.findViewById(R.id.tv_item_name)
-        val tvDescription: TextView = itemView.findViewById(R.id.tv_item_description)
+//        val tvDescription: TextView = itemView.findViewById(R.id.tv_item_description)
     }
 }

@@ -26,6 +26,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 //        binding = ActivityMainBinding.inflate(layoutInflater)
 
+        supportActionBar!!.setBackgroundDrawable(ColorDrawable(Color.parseColor("#FFFFFF")))
+
 
 //        if (getSupportActionBar() != null) {
 //            getSupportActionBar()?.hide();

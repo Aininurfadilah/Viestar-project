@@ -31,4 +31,10 @@
     <style name="bgTabLayout">
         <item name="android:background">@color/orange</item>
     </style>
+    <style name="bgFragStudy">
+        <item name="android:background">@drawable/bg</item>
+    </style>
+    <style name="word">
+        <item name="android:background">@color/white</item>
+    </style>
 </resources>

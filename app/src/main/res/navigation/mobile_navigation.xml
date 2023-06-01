@@ -7,6 +7,7 @@
 
     <fragment
         android:id="@+id/navigation_home"
+        app:titleTextColor="@color/orange"
         android:name="com.example.viestar.ui.home.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />

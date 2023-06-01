@@ -20,167 +20,167 @@
 <!--        app:layout_constraintTop_toTopOf="parent" />-->
 
 
-    <LinearLayout
-        android:id="@+id/banner"
-        style="@style/groupStyleBanner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:gravity="start"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints">
+<!--    <LinearLayout-->
+<!--        android:id="@+id/banner"-->
+<!--        style="@style/groupStyleBanner"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="10dp"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:layout_marginEnd="10dp"-->
+<!--        android:gravity="start"-->
+<!--        android:orientation="vertical"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        tools:ignore="MissingConstraints">-->
 
-        <TextView
-            android:id="@+id/txtKosakataharii"
-            style="@style/txtInterbold12"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="6dp"
-            android:layout_marginEnd="10dp"
-            android:ellipsize="end"
-            android:singleLine="true"
-            android:text="@string/kosa_kata_hari_ini"
-            tools:text="@string/kosa_kata_hari_ini" />
+<!--        <TextView-->
+<!--            android:id="@+id/txtKosakataharii"-->
+<!--            style="@style/txtInterbold12"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:layout_marginTop="6dp"-->
+<!--            android:layout_marginEnd="10dp"-->
+<!--            android:ellipsize="end"-->
+<!--            android:singleLine="true"-->
+<!--            android:text="@string/kosa_kata_hari_ini"-->
+<!--            tools:text="@string/kosa_kata_hari_ini" />-->
 
-        <LinearLayout
-            android:id="@+id/linearRowrectanglethirtynine"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="3dp"
-            android:layout_marginEnd="10dp"
-            android:orientation="horizontal">
+<!--        <LinearLayout-->
+<!--            android:id="@+id/linearRowrectanglethirtynine"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:layout_marginTop="3dp"-->
+<!--            android:layout_marginEnd="10dp"-->
+<!--            android:orientation="horizontal">-->
 
-            <View
-                android:id="@+id/viewRectangleThirtyNine"
-                android:layout_width="100dp"
-                android:layout_height="5dp"
-                android:background="@drawable/rectangle_bg_orange_a200_radius_2" />
+<!--            <View-->
+<!--                android:id="@+id/viewRectangleThirtyNine"-->
+<!--                android:layout_width="100dp"-->
+<!--                android:layout_height="5dp"-->
+<!--                android:background="@drawable/rectangle_bg_orange_a200_radius_2" />-->
 
-            <View
-                android:id="@+id/viewRectangleForty"
-                android:layout_width="100dp"
-                android:layout_height="5dp"
-                android:layout_marginStart="10dp"
-                android:background="@drawable/rectangle_bg_bluegray_100_radius_2" />
+<!--            <View-->
+<!--                android:id="@+id/viewRectangleForty"-->
+<!--                android:layout_width="100dp"-->
+<!--                android:layout_height="5dp"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:background="@drawable/rectangle_bg_bluegray_100_radius_2" />-->
 
-            <View
-                android:id="@+id/viewRectangleFortyOne"
-                android:layout_width="100dp"
-                android:layout_height="5dp"
-                android:layout_marginStart="10dp"
-                android:background="@drawable/rectangle_bg_bluegray_100_radius_2" />
-        </LinearLayout>
+<!--            <View-->
+<!--                android:id="@+id/viewRectangleFortyOne"-->
+<!--                android:layout_width="100dp"-->
+<!--                android:layout_height="5dp"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:background="@drawable/rectangle_bg_bluegray_100_radius_2" />-->
+<!--        </LinearLayout>-->
 
-        <LinearLayout
-            android:id="@+id/linearRowklikartiyang"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="38dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="39dp"
-            android:gravity="start"
-            android:orientation="horizontal">
+<!--        <LinearLayout-->
+<!--            android:id="@+id/linearRowklikartiyang"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:layout_marginTop="38dp"-->
+<!--            android:layout_marginEnd="10dp"-->
+<!--            android:layout_marginBottom="39dp"-->
+<!--            android:gravity="start"-->
+<!--            android:orientation="horizontal">-->
 
-            <LinearLayout
-                android:id="@+id/linearColumnklikartiyang"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_weight="0.54"
-                android:gravity="center_horizontal"
-                android:orientation="vertical">
+<!--            <LinearLayout-->
+<!--                android:id="@+id/linearColumnklikartiyang"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:layout_weight="0.54"-->
+<!--                android:gravity="center_horizontal"-->
+<!--                android:orientation="vertical">-->
 
-                <TextView
-                    android:id="@+id/txtKlikartiyang"
-                    style="@style/txtInterbold14"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ellipsize="end"
-                    android:gravity="start"
-                    android:singleLine="true"
-                    android:text="@string/klik_arti_tepat"
-                    tools:text="@string/klik_arti_tepat" />
+<!--                <TextView-->
+<!--                    android:id="@+id/txtKlikartiyang"-->
+<!--                    style="@style/txtInterbold14"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:ellipsize="end"-->
+<!--                    android:gravity="start"-->
+<!--                    android:singleLine="true"-->
+<!--                    android:text="@string/klik_arti_tepat"-->
+<!--                    tools:text="@string/klik_arti_tepat" />-->
 
-                <TextView
-                    android:id="@+id/txtEat"
-                    style="@style/txtInterbold14_1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="start"
-                    android:layout_marginStart="53dp"
-                    android:layout_marginTop="7dp"
-                    android:layout_marginEnd="53dp"
-                    android:ellipsize="end"
-                    android:singleLine="true"
-                    android:text="@string/eat"
-                    tools:text="Eat" />
+<!--                <TextView-->
+<!--                    android:id="@+id/txtEat"-->
+<!--                    style="@style/txtInterbold14_1"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="start"-->
+<!--                    android:layout_marginStart="53dp"-->
+<!--                    android:layout_marginTop="7dp"-->
+<!--                    android:layout_marginEnd="53dp"-->
+<!--                    android:ellipsize="end"-->
+<!--                    android:singleLine="true"-->
+<!--                    android:text="@string/eat"-->
+<!--                    tools:text="Eat" />-->
 
-                <ImageView
-                    android:id="@+id/imageVolume"
-                    android:layout_width="20dp"
-                    android:layout_height="24dp"
-                    android:layout_gravity="start"
-                    android:layout_marginStart="54dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="54dp"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/baseline_volume_up_24"
-                    tools:ignore="ContentDescription"
-                    tools:src="@drawable/baseline_volume_up_24" />
-            </LinearLayout>
+<!--                <ImageView-->
+<!--                    android:id="@+id/imageVolume"-->
+<!--                    android:layout_width="20dp"-->
+<!--                    android:layout_height="24dp"-->
+<!--                    android:layout_gravity="start"-->
+<!--                    android:layout_marginStart="54dp"-->
+<!--                    android:layout_marginTop="5dp"-->
+<!--                    android:layout_marginEnd="54dp"-->
+<!--                    android:scaleType="fitXY"-->
+<!--                    android:src="@drawable/baseline_volume_up_24"-->
+<!--                    tools:ignore="ContentDescription"-->
+<!--                    tools:src="@drawable/baseline_volume_up_24" />-->
+<!--            </LinearLayout>-->
 
-            <LinearLayout
-                android:id="@+id/linearColumnmakan"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.46"
-                android:gravity="start"
-                android:orientation="vertical">
+<!--            <LinearLayout-->
+<!--                android:id="@+id/linearColumnmakan"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="0.46"-->
+<!--                android:gravity="start"-->
+<!--                android:orientation="vertical">-->
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btnMakan"
-                    style="@style/btnRoundedOutline"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ellipsize="end"
-                    android:gravity="center"
-                    android:paddingStart="30dp"
-                    android:paddingTop="6dp"
-                    android:paddingEnd="30dp"
-                    android:paddingBottom="6dp"
-                    android:singleLine="true"
-                    android:text="@string/makan"
-                    android:textAllCaps="false"
-                    tools:text="@string/makan" />
+<!--                <androidx.appcompat.widget.AppCompatButton-->
+<!--                    android:id="@+id/btnMakan"-->
+<!--                    style="@style/btnRoundedOutline"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:ellipsize="end"-->
+<!--                    android:gravity="center"-->
+<!--                    android:paddingStart="30dp"-->
+<!--                    android:paddingTop="6dp"-->
+<!--                    android:paddingEnd="30dp"-->
+<!--                    android:paddingBottom="6dp"-->
+<!--                    android:singleLine="true"-->
+<!--                    android:text="@string/makan"-->
+<!--                    android:textAllCaps="false"-->
+<!--                    tools:text="@string/makan" />-->
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btnMinum"
-                    style="@style/btnRoundedOutline"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="17dp"
-                    android:ellipsize="end"
-                    android:gravity="center"
-                    android:paddingStart="30dp"
-                    android:paddingTop="6dp"
-                    android:paddingEnd="30dp"
-                    android:paddingBottom="6dp"
-                    android:singleLine="true"
-                    android:text="@string/minum"
-                    android:textAllCaps="false"
-                    tools:text="@string/minum" />
-            </LinearLayout>
-        </LinearLayout>
-    </LinearLayout>
+<!--                <androidx.appcompat.widget.AppCompatButton-->
+<!--                    android:id="@+id/btnMinum"-->
+<!--                    style="@style/btnRoundedOutline"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="17dp"-->
+<!--                    android:ellipsize="end"-->
+<!--                    android:gravity="center"-->
+<!--                    android:paddingStart="30dp"-->
+<!--                    android:paddingTop="6dp"-->
+<!--                    android:paddingEnd="30dp"-->
+<!--                    android:paddingBottom="6dp"-->
+<!--                    android:singleLine="true"-->
+<!--                    android:text="@string/minum"-->
+<!--                    android:textAllCaps="false"-->
+<!--                    tools:text="@string/minum" />-->
+<!--            </LinearLayout>-->
+<!--        </LinearLayout>-->
+<!--    </LinearLayout>-->
 
 <!--    <androidx.coordinatorlayout.widget.CoordinatorLayout-->
 <!--        android:layout_width="match_parent"-->
@@ -191,29 +191,37 @@
 
 <!--    </androidx.coordinatorlayout.widget.CoordinatorLayout>-->
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="500dp"
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="500dp"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        style="@style/bgTabLayout"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/banner"-->
+<!--        android:orientation="vertical">-->
+
+<!--        <com.google.android.material.tabs.TabLayout-->
+<!--            android:id="@+id/tabs"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            style="@style/bgTabLayout"-->
+<!--            app:tabIndicatorColor="@color/white"-->
+<!--            app:tabTextColor="@android:color/white" />-->
+
+<!--        <androidx.viewpager2.widget.ViewPager2-->
+<!--            android:id="@+id/view_pager"-->
+<!--            android:paddingTop="5dp"-->
+<!--            android:paddingBottom="135dp"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent" />-->
+
+<!--    </LinearLayout>-->
+
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_marginTop="10dp"
-        style="@style/bgTabLayout"
-        app:layout_constraintTop_toBottomOf="@+id/banner"
-        android:orientation="vertical">
-
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tabs"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/bgTabLayout"
-            app:tabIndicatorColor="@color/white"
-            app:tabTextColor="@android:color/white" />
-
-        <androidx.viewpager2.widget.ViewPager2
-            android:id="@+id/view_pager"
-            android:paddingTop="5dp"
-            android:paddingBottom="135dp"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-    </LinearLayout>
+        android:id="@+id/rv_film"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:itemCount="5"
+        tools:listitem="@layout/item_film" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
