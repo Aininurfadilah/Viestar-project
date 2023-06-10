@@ -19,6 +19,17 @@
     <string name="deskripsi_film">Selama banyak misi dan melawan rintangan yang mustahil, Dom Toretto dan keluarganya telah mengakali dan mengalahkan setiap musuh di jalan mereka</string>
     <string name="save_word">Save Words</string>
     <string name="word">Word</string>
+    <string name="permission_not_granted">App requires access to storage to access items stored in MediaStore.</string>
+    <string name="grant_permission">Grant Permission</string>
+    <string name="searchbar_hint">Masukkan kata</string>
+    <string name="audio_track">Audio Track</string>
+    <string name="subtitles">Subtitles</string>
+    <string name="booster">Booster</string>
+    <string name="speed">Speed</string>
+    <string name="sleep_timer">Sleep Timer</string>
+    <string name="pip_mode">PIP Mode</string>
+    <string name="back_btn">Back Button</string>
+    <string name="pilih_subtitle">Pilih Subtitle</string>
 
     <string-array name="data_name">
         <item>Fast and Furious 9</item>

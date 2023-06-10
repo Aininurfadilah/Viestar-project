@@ -107,9 +107,11 @@ class HomeFragment : Fragment() {
         permissions: Array<String>,
         grantResults: IntArray
     ) {
-        onRequestPermissionsResult(requestCode, permissions, grantResults)
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         when (requestCode) {
             READ_EXTERNAL_STORAGE_REQUEST -> {
+
+                Log.d("Cekk", "anjing wkwkwkwkwkwkk")
 
                 if (grantResults.isNotEmpty() && grantResults[0] == PERMISSION_GRANTED) {
 //                    showImages()
@@ -132,6 +134,8 @@ class HomeFragment : Fragment() {
             }
         }
     }
+
+
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
@@ -191,11 +195,11 @@ class HomeFragment : Fragment() {
         bundle.putParcelable(DetailFilmFragment.EXTRA_DETAIL_FILM, image.contentUri)
         detailFragment.arguments = bundle
 
-        fragmentManager?.beginTransaction()?.apply {
-            replace(R.id.nav_host_fragment, detailFragment, DetailFilmFragment::class.java.simpleName)
-            addToBackStack(null)
-            commit()
-        }
+//        fragmentManager?.beginTransaction()?.apply {
+//            replace(R.id.nav_host_fragment, detailFragment, DetailFilmFragment::class.java.simpleName)
+//            addToBackStack(null)
+//            commit()
+//        }
 
     }
 
