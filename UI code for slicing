@@ -15,7 +15,7 @@ xmlns:aapt="http://schemas.android.com/aapt"
 android:width="360dp"
 android:height="780dp"
 android:viewportWidth="360"
-android:viewportHeight="780"
+android:viewportHeight="800"
  >
 <group>
 <clip-path
