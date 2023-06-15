@@ -1,0 +1,26 @@
+<!-- Pop-up for word study -->
+<RelativeLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/pop_up_for_"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+android:clipToOutline="true"
+android:background="@drawable/pop_up_for_"
+android:elevation="8dp"
+ />
+
+<!-- drawable/pop_up_for_.xml -->
+<vector
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:aapt="http://schemas.android.com/aapt"
+android:width="312dp"
+android:height="264dp"
+android:viewportWidth="312"
+android:viewportHeight="264"
+ >
+<group>
+<clip-path
+android:pathData="M0 0H312V264H0V0Z"
+/>
+</group>
+</vector>
