@@ -1,0 +1,24 @@
+<!-- Video Player -->
+<RelativeLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/video_playe"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+android:background="@drawable/video_playe"
+ />
+
+<!-- drawable/video_playe.xml -->
+<vector
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:aapt="http://schemas.android.com/aapt"
+android:width="640dp"
+android:height="360dp"
+android:viewportWidth="640"
+android:viewportHeight="360"
+ >
+<group>
+<clip-path
+android:pathData="M0 0H640V360H0V0Z"
+/>
+</group>
+</vector>
