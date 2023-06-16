@@ -12,6 +12,7 @@
         android:text="@string/word"
         android:textSize="20sp"
         android:gravity="center"
+        android:textColor="@color/orange"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentLeft="true"

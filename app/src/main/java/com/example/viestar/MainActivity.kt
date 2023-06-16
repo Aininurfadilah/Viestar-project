@@ -1,14 +1,11 @@
 package com.example.viestar
 
-//import com.example.viestar.databinding.ActivityMainBinding
 import android.Manifest
 import android.app.Activity
 import android.app.SearchManager
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
-import android.graphics.Color
-import android.graphics.drawable.ColorDrawable
 import android.net.Uri
 import android.os.Bundle
 import android.provider.Settings
@@ -25,13 +22,7 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import androidx.databinding.DataBindingUtil
-import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -42,8 +33,7 @@ import com.example.viestar.ui.home.DetailFilmFragment
 import com.example.viestar.ui.home.HomeViewModel
 import com.example.viestar.ui.home.MediaStoreVideo
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.android.material.search.SearchBar
-import java.util.*
+import com.google.firebase.auth.FirebaseAuth
 
 private const val DELETE_PERMISSION_REQUEST = 0x1033
 private const val READ_EXTERNAL_STORAGE_REQUEST = 0x1045
@@ -54,16 +44,18 @@ class MainActivity : AppCompatActivity() {
     private lateinit var tvText: TextView
     private lateinit var navigation: BottomNavigationView
     private val viewModel: HomeViewModel by viewModels()
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        setContentView(R.layout.activity_main)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val galleryAdapter = GalleryAdapter { video ->
+        val galleryAdapter = GalleryAdapter(this) { video ->
             deleteImage(video)
         }
+
+        auth = FirebaseAuth.getInstance()
 
         with(binding) {
             searchView.setupWithSearchBar(searchBar)
@@ -73,50 +65,22 @@ class MainActivity : AppCompatActivity() {
                     searchBar.text = searchView.text
                     searchView.hide()
                     galleryAdapter.filterData(searchView.text.toString())
-                    Toast.makeText(this@MainActivity, searchView.text, Toast.LENGTH_SHORT).show()
+//                    Toast.makeText(this@MainActivity, searchView.text, Toast.LENGTH_SHORT).show()
                     false
                 }
-//            searchBar.inflateMenu(R.menu.option_menu)
-//            searchBar.setOnMenuItemClickListener { menuItem ->
-//                when (menuItem.itemId) {
-//                    R.id.menu1 -> {
-//                        true
-//                    }
-//                    R.id.menu2 -> {
-//                        true
-//                    }
-//                    else -> false
-//                }
-//            }
         }
 
-
-//        supportActionBar!!.setBackgroundDrawable(ColorDrawable(Color.parseColor("#FFFFFF")))
-
-//        if (getSupportActionBar() != null) {
-//            getSupportActionBar()?.hide();
-//        }
+//        val modelPath = "ENDGAME_model.tflite"
+//        val tfliteHelper = TensorFlowLiteHelper(this, modelPath)
+//        tfliteHelper.initializeInterpreter()
+//
+//        val inputText = "kita akan membutuhkan otak yang sangat besar ."
+//        val output = tfliteHelper.runInference(inputText)
+//
+//        Log.d("TFLITE", output.toString())
 
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
         navView.setItemIconTintList(null);
-//        val navController = findNavController(R.id.nav_host_fragment)
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-//        val appBarConfiguration = AppBarConfiguration.Builder(
-//            R.id.navigation_home, R.id.navigation_home, R.id.navigation_study, R.id.navigation_profile
-//        ).build()
-//        setupActionBarWithNavController(navController, appBarConfiguration)
-//        navView.setupWithNavController(navController)
-
-
-//        val colorDrawable = ColorDrawable(Color.parseColor("#FFFFFF"))
-
-        // Set BackgroundDrawable
-
-        // Set BackgroundDrawable
-//        actionBar!!.setBackgroundDrawable(colorDrawable)
-
-
 
         binding.rvFilm.also { view ->
             view.layoutManager = LinearLayoutManager(this)
@@ -128,9 +92,7 @@ class MainActivity : AppCompatActivity() {
             galleryAdapter.setData(videos)
         })
 
-        galleryAdapter.filterData("")
-
-//        galleryAdapter.setData()
+//        galleryAdapter.filterData("")
 
         viewModel.permissionNeededForDelete.observe(this, Observer { intentSender ->
             intentSender?.let {
@@ -148,38 +110,14 @@ class MainActivity : AppCompatActivity() {
 
         openMediaStore()
 
-//        binding.openAlbum.setOnClickListener { openMediaStore() }
         binding.grantPermissionButton.setOnClickListener { openMediaStore() }
         if (haveStoragePermission()) {
             showVideos()
-//            binding.welcomeView.visibility = View.VISIBLE
         }
 
-//        binding.topAppBar.setOnMenuItemClickListener { menuItem ->
-//            when (menuItem.itemId) {
-//                R.id.profile -> {
-//                    supportFragmentManager.beginTransaction()
-//                        .replace(R.id.textProfile, ProfileFragment())
-//                        .addToBackStack(null)
-//                        .commit()
-//                    true
-//                }
-//                else -> false
-//            }
-//        }
         init()
         navigationListener()
 
-
-//        setupSearchBar()
-    }
-
-
-
-    private fun searchListItems(query: String) {
-        // Implementasikan logika pencarian pada ListAdapter sesuai dengan kebutuhan Anda
-        // Misalnya, filter data berdasarkan query dan perbarui tampilan RecyclerView
-        Toast.makeText(this@MainActivity, query, Toast.LENGTH_SHORT).show()
     }
 
     private fun init() {
@@ -191,13 +129,9 @@ class MainActivity : AppCompatActivity() {
         navigation.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.navigation_home -> {
-//                    tvText.text = item.title
-//                    val intent = Intent(this, MainActivity::class.java)
-//                    startActivity(intent)
                     return@setOnItemSelectedListener true
                 }
                 R.id.navigation_study -> {
-//                    tvText.text = item.title
                     val intent = Intent(this, StudyActivity::class.java)
                     startActivity(intent)
                     overridePendingTransition(0,0);
@@ -222,7 +156,7 @@ class MainActivity : AppCompatActivity() {
         searchView.queryHint = resources.getString(R.string.search_hint)
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String): Boolean {
-                Toast.makeText(this@MainActivity, query, Toast.LENGTH_SHORT).show()
+//                Toast.makeText(this@MainActivity, query, Toast.LENGTH_SHORT).show()
                 searchView.clearFocus()
                 return true
             }
@@ -329,17 +263,22 @@ class MainActivity : AppCompatActivity() {
         intent.putExtra(DetailFilmActivity.EXTRA_DETAIL_FILM, image.contentUri)
         startActivity(intent)
 
-//        fragmentManager?.beginTransaction()?.apply {
-//            replace(R.id.nav_host_fragment, detailFragment, DetailFilmFragment::class.java.simpleName)
-//            addToBackStack(null)
-//            commit()
-//        }
-
     }
 
-    private inner class GalleryAdapter(val onClick: (MediaStoreVideo) -> Unit) :
+    override fun onBackPressed() {
+        super.onBackPressed()
+        finishAffinity()
+    }
+
+    override fun onPause() {
+        super.onPause()
+        auth.signOut()
+    }
+
+    private inner class GalleryAdapter(
+        private val context: Context,
+        val onClick: (MediaStoreVideo) -> Unit) :
         ListAdapter<MediaStoreVideo, VideoViewHolder>(MediaStoreVideo.DiffCallback) {
-//        private val filteredData: MutableList<MediaStoreVideo> = mutableListOf()
         private var originalData: List<MediaStoreVideo> = emptyList()
         private var filteredData: List<MediaStoreVideo> = emptyList()
 
@@ -357,6 +296,10 @@ class MainActivity : AppCompatActivity() {
                 originalData
             }
             submitList(filteredData)
+            if (filteredData.isEmpty()) {
+                // Menampilkan toast jika hasil pencarian kosong
+                Toast.makeText(context, "Hasil pencarian tidak ditemukan", Toast.LENGTH_SHORT).show()
+            }
         }
 
         // ...
@@ -365,7 +308,6 @@ class MainActivity : AppCompatActivity() {
             return filteredData.size
         }
 
-
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VideoViewHolder {
             val layoutInflater = LayoutInflater.from(parent.context)
             val view = layoutInflater.inflate(R.layout.item_film, parent, false)
@@ -373,7 +315,6 @@ class MainActivity : AppCompatActivity() {
         }
 
         override fun onBindViewHolder(holder: VideoViewHolder, position: Int) {
-//            val mediaStoreImage = getItem(position)
             val mediaStoreImage = filteredData[position]
             holder.rootView.tag = mediaStoreImage
             holder.tvName.text = mediaStoreImage.displayName

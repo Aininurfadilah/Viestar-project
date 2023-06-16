@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">VieStar</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="title_home">Home</string>
-    <string name="title_study">Study</string>
+    <string name="title_home">Nonton</string>
+    <string name="title_study">Belajar</string>
     <string name="title_notifications">Notifications</string>
     <string name="title_profile">Profile</string>
     <string name="search">Search</string>
@@ -21,7 +21,8 @@
     <string name="word">Word</string>
     <string name="permission_not_granted">App requires access to storage to access items stored in MediaStore.</string>
     <string name="grant_permission">Grant Permission</string>
-    <string name="searchbar_hint">Masukkan kata</string>
+    <string name="searchbar_hint_nonton">Cari film...</string>
+    <string name="searchbar_hint_kata">Cari kosakata...</string>
     <string name="audio_track">Audio Track</string>
     <string name="subtitles">Subtitles</string>
     <string name="booster">Booster</string>
@@ -29,7 +30,29 @@
     <string name="sleep_timer">Sleep Timer</string>
     <string name="pip_mode">PIP Mode</string>
     <string name="back_btn">Back Button</string>
-    <string name="pilih_subtitle">Pilih Subtitle</string>
+    <string name="pilih_subtitle">Srt</string>
+    <string name="title_dialog">Information</string>
+    <string name="cancel">Cancel</string>
+    <string name="decline">Decline</string>
+    <string name="accept">Ok</string>
+    <string name="supporting_text">Anda memilih kata : </string>
+    <string name="knife">Knife</string>
+    <string name="title_login_page">Login</string>
+    <string name="message_login_page">Please login first </string>
+    <string name="email">Email</string>
+    <string name="empty_email">Please insert your email</string>
+    <string name="invalid_email">The email is invalid</string>
+    <string name="empty_password">Please insert your password</string>
+    <string name="password_must_more8">Password must more than 8 character</string>
+    <string name="dont_have_account">Don\'t have account ?</string>
+    <string name="action_register">Register here</string>
+    <string name="login">Sign In</string>
+    <string name="password">Password</string>
+    <string name="title_signup_page">Register</string>
+    <string name="name">Name</string>
+    <string name="have_account">Already have account ?</string>
+    <string name="action_login">Login here</string>
+    <string name="signup">Sign Up</string>
 
     <string-array name="data_name">
         <item>Fast and Furious 9</item>
@@ -47,13 +70,17 @@
         <item>@drawable/homeforrent</item>
     </integer-array>
     <string-array name="data_word">
-        <item>Word</item>
-        <item>Word</item>
-        <item>Word</item>
-        <item>Word</item>
-        <item>Word</item>
-        <item>Word</item>
-        <item>Word</item>
-        <item>Word</item>
+        <item>home</item>
+        <item>easy</item>
+        <item>honeymoon</item>
+        <item>keeping</item>
+        <item>fucking</item>
+        <item>today</item>
+        <item>good</item>
+        <item>probably</item>
+        <item>point</item>
+        <item>ready</item>
+        <item>please</item>
+        <item>boys</item>
     </string-array>
 </resources>

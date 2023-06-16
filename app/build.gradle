@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-parcelize'
+    id 'com.google.gms.google-services'
 }
 
 android {
@@ -22,6 +23,7 @@ android {
         viewBinding = true
         dataBinding = true
     }
+
 
     buildTypes {
         release {
@@ -63,4 +65,23 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0'
 
     implementation 'com.github.TutorialsAndroid:FilePicker:v8.0.19'
+
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation "com.squareup.retrofit2:converter-gson:2.9.0"
+    implementation "com.squareup.okhttp3:logging-interceptor:4.9.0"
+
+    implementation 'com.google.android.exoplayer:exoplayer-hls:2.16.1'
+
+    implementation 'org.tensorflow:tensorflow-lite:2.5.0'
+
+    // Import the Firebase BoM
+    implementation platform('com.google.firebase:firebase-bom:32.1.0')
+
+    // Add the dependency for the Firebase SDK for Google Analytics
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+
+    implementation "androidx.datastore:datastore-preferences:1.0.0"
+
+    implementation 'com.google.firebase:firebase-auth:16.0.4'
+    implementation 'com.google.android.gms:play-services-auth:16.0.1'
 }

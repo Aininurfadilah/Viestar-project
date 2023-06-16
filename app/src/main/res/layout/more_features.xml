@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    style="@style/bgMoreFeatures"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 
@@ -73,6 +74,7 @@
             app:icon="@drawable/baseline_picture_in_picture_alt_24"
             android:text="@string/pip_mode"
             app:iconGravity="top"
+            android:visibility="gone"
             android:background="?attr/selectableItemBackground"
             android:clickable="true"
             android:focusable="true"

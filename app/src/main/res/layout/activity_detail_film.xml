@@ -17,6 +17,30 @@
         app:resize_mode="fixed_width"
         app:show_buffering="when_playing" />
 
+    <com.google.android.exoplayer2.ui.SubtitleView
+        android:id="@+id/subtitleView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        />
+
+    <TextView
+        android:id="@+id/overlay_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="Knife"
+        android:textColor="@android:color/white"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/moreFeaturesBtn"
+        app:layout_constraintVertical_bias="0.71000004" />
+
+
     <ImageButton
         android:id="@+id/moreFeaturesBtn"
         android:layout_width="50dp"
