@@ -1,0 +1,20 @@
+const express = require('express');
+const {addVocab, 
+       getAllVocabs, 
+       getVocab,
+       updateStudent,
+       deleteVocab
+      } = require('../controllers/VocabController');
+
+const router = express.Router();
+
+router.post('/vocab', addVocab);
+router.get('/vocabs', getAllVocabs);
+router.get('/vocab/:id', getVocab);
+router.put('/vocab/:id', updateVocab);
+router.delete('/vocab/:id', deleteVocab);
+
+
+module.exports = {
+    routes: router
+}
